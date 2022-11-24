@@ -83,6 +83,12 @@ class LoginFragment : Fragment() {
                                 username = tieUsername.text.toString(),
                                 password = tiePassword.text.toString().md5()
                             ))
+
+                        database.TempDao().insertTemp(DbTemp(
+                            id = 1,
+                            name = tieFullName.text.toString(),
+                            username = tieUsername.text.toString()
+                        ))
                         findNavController().navigate(R.id.action_login_to_product)
                     } catch (e: Exception) {
                         Snackbar.make(btnSubmit, "Error while processing to DB", Snackbar.LENGTH_LONG).show()
