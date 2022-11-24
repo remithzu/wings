@@ -42,14 +42,18 @@ class LoginFragment : Fragment() {
         val user = database.UserDao().getListUser()
         if (user.isEmpty()) {
             isLogin = false
+            binding.textView.text = getString(R.string.register)
             binding.tilFullName.visibility = View.VISIBLE
             binding.tilRePassword.visibility = View.VISIBLE
+            binding.btnSubmit.text = getString(R.string.register)
         } else {
             isLogin = true
+            binding.textView.text = getString(R.string.login)
             binding.tilFullName.visibility = View.GONE
             binding.tilRePassword.visibility = View.GONE
             binding.tilRePassword.error = null
             binding.tilRePassword.isErrorEnabled = false
+            binding.btnSubmit.text = getString(R.string.login)
         }
         initListener()
         validate()
