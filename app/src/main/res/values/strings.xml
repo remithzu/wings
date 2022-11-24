@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Wings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_transaction_history">Trans History</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="login_fragment">Login Fragment</string>
+    <string name="product_fragment">Product Fragment</string>
+    <string name="product_add_fragment">Product Add Fragment</string>
+    <string name="product_detail_fragment">Product Detail Fragment</string>
+    <string name="cart_fragment">Cart Fragment</string>
+    <string name="transaction_fragment">Transaction Fragment</string>
+    <string name="transaction_detail_fragment">Transaction Detail Fragment</string>
+    <!-- end of navigation -->
+    <string name="transaction">Transaction</string>
+    <string name="cart">Cart</string>
+    <string name="buy">Buy</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="rp_1">Rp. %1$S</string>
+    <string name="product">Product</string>
+    <string name="product_code">Product Code</string>
+    <string name="product_name">Product Name</string>
+    <string name="currency">Currency</string>
+    <string name="discount">Discount</string>
+    <string name="unit">Unit</string>
+    <string name="checkout">Checkout</string>
+    <string name="detail">Detail</string>
+    <string name="price">Price</string>
+    <string name="dimension">Dimension</string>
+    <string name="price_unit">Price Unit</string>
+    <string name="total">Total:</string>
+    <string name="sub_total">Sub Total: Rp. %1$S</string>
+    <string name="confirm">Confirm</string>
+    <string name="password_helper">Max Password length is 16 digits</string>
+    <string name="password_helper_2">Password must be same as before</string>
+    <string name="password_error_incorrect">Username or Password incorrect</string>
+    <string name="password_error_not_match">Password is not match</string>
+    <string name="description">description</string>
+    <string name="submit">Submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

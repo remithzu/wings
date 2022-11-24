@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ProductFragment">
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.rmtz.wings.ui.LoginFragment"
+        android:label="@string/login_fragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_product"
+            app:destination="@id/ProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductFragment"
+        android:name="com.rmtz.wings.ui.ProductFragment"
+        android:label="@string/product_fragment"
+        tools:layout="@layout/fragment_product">
+
+        <action
+            android:id="@+id/action_product_to_detail_product"
+            app:destination="@id/ProductDetailFragment">
+            <argument
+                android:name="id_product"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_product_to_cart"
+            app:destination="@id/CartFragment" />
+
+        <action
+            android:id="@+id/action_product_to_add_product"
+            app:destination="@id/ProductAddFragment" />
+        <action
+            android:id="@+id/action_Product_to_Transaction"
+            app:destination="@id/TransactionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductAddFragment"
+        android:name="com.rmtz.wings.ui.ProductAddFragment"
+        android:label="@string/product_add_fragment"
+        tools:layout="@layout/fragment_product_add">
+
+        <action
+            android:id="@+id/action_add_product_to_product"
+            app:destination="@id/ProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductDetailFragment"
+        android:name="com.rmtz.wings.ui.DetailProductFragment"
+        android:label="@string/product_detail_fragment"
+        tools:layout="@layout/fragment_detail_product">
+        <argument
+            android:name="id_product"
+            app:argType="string"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_detail_product_to_cart"
+            app:destination="@id/CartFragment" />
+        <action
+            android:id="@+id/action_detail_product_to_product"
+            app:destination="@id/ProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CartFragment"
+        android:name="com.rmtz.wings.ui.CheckoutFragment"
+        android:label="@string/cart_fragment"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_Cart_to_Product"
+            app:destination="@id/ProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TransactionFragment"
+        android:name="com.rmtz.wings.ui.TransactionFragment"
+        android:label="@string/transaction_fragment"
+        tools:layout="@layout/fragment_transaction">
+        <action
+            android:id="@+id/action_Transaction_to_Product"
+            app:destination="@id/ProductFragment" />
+
+        <action
+            android:id="@+id/action_Transaction_to_Transaction_Detail"
+            app:destination="@id/TransactionDetailFragment">
+            <argument
+                android:name="id_transaction"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/TransactionDetailFragment"
+        android:name="com.rmtz.wings.ui.TransactionDetailFragment"
+        android:label="@string/transaction_fragment"
+        tools:layout="@layout/fragment_transaction_detail">
+        <action
+            android:id="@+id/action_Transaction_Detail_to_Transaction"
+            app:destination="@id/TransactionFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.rmtz.wings.MainActivity">
+    <item
+        android:id="@+id/action_transaction_history"
+        android:orderInCategory="100"
+        android:title="@string/action_transaction_history"/>
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="@string/action_logout" />
+
+</menu>
